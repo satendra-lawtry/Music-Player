@@ -1,0 +1,60 @@
+{% extends "adminapp/base.html" %}
+
+
+
+{% block adminprofile %}
+
+<div class="container">
+      <div class="row my-3">
+          <div class="col-sm-6 offset-sm-3">
+              <h3>complate Admin Registration Profile</h3>
+              <form action="" method="post" novalidate class="shadow p-5">
+                  {% csrf_token %}
+                  <div class="row mb-2">
+                      
+                      <div class="col">
+                          <div class="form-outline">
+                              <label class="form-label" for="form3Example2">Shop Name</label>
+                              <input type="text" id="form3Example2" name="shopname" class="form-control" required />
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row mb-2">
+                      <div class="col">
+                          <div class="form-outline">
+                              <label class="form-label" for="form3Example1">GST Number</label>
+                              <input type="text" id="form3Example1" name="gstno" class="form-control" required/ >
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row mb-2">
+                      <div class="col">
+                          <div class="form-outline">
+                              <label class="form-label" for="form3Example1">Contect Number</label>
+                              <input type="number" id="form3Example1" name="shopcno" class="form-control" required/ >
+                          </div>
+                      </div>
+                      <div class="col">
+                          <label for="formFile" class="form-label">Choose Shop Image</label>
+                          <input type="file" class="form-control" name="shopimage"  id="formFile" required>
+                      </div>
+                  </div>
+                  <div class="mb-2">
+                      <label for="exampleFormControlTextarea1" class="form-label">Shop Address</label>
+                      <textarea class="form-control" name="shopadd" id="exampleFormControlTextarea1" rows="2" required></textarea>
+                  </div>
+                  <div class="text-center text-primery fw-bold mt-2"><small>Existing User? <a href="{% url 'adminlogin' %}"
+                              class="text-danger">Login Now</a> </small>
+                  </div>
+                  <div class="d-grid gap-2 col-3 mx-auto mt-3">
+                      <button class="btn btn-primary" type="submit">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+  
+
+
+
+{% endblock adminprofile %}

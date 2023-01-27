@@ -1,0 +1,33 @@
+{% extends "adminapp/base.html" %}
+
+
+{% block adminlogin %}
+
+<div class="container">
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3">
+            <h3>Admin Login </h3>
+            <form action="" method="post" novalidate class="shadow p-5">
+                {% csrf_token %}
+                <div class="col">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example2">Email</label>
+                        <input type="email" id="form3Example2" name="shopemail" class="form-control" required/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="spassword">
+                </div>
+                <div class="text-center text-primery fw-bold"><small> Don't Have Registration?
+                        <a href="{% url 'adminregistration' %}" class="text-danger">Register As Admin</a></small>
+                </div>
+                <div class="d-grid gap-2 col-3 mx-auto mt-3">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock adminlogin %}

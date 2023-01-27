@@ -1,0 +1,68 @@
+
+<div class="container">
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3">
+            <center>
+                <h3>Add Product</h3>
+            </center>
+            <form action="" method="post" novalidate class="shadow p-5">
+                {% csrf_token %}
+                <div class="mb-1 m">
+                    <label for="exampleInputText1" class="form-label">Product Title</label>
+                    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp"
+                        name="title">
+                    <div id="textHelp" class="form-text"></div>
+                </div>
+
+                <div class="row mb-1">
+                    <div class="col">
+                        <div class="form-outline">
+                            <label class="form-label" for="form3Example1">Selling Prize</label>
+                            <input type="number" id="form3Example1" class="form-control" name="selling_price" />
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-outline">
+                            <label class="form-label" for="form3Example2">Discounted Prize</label>
+                            <input type="number" id="form3Example2" class="form-control" name="discounted_price" />
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-1">
+                    <label for="exampleInputText1" class="form-label">Brand Name</label>
+                    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp"
+                        name="brand">
+                    <div id="textHelp" class="form-text"></div>
+                </div>
+
+                <div>
+                    <label class="form-label m" for="form3Example2">Category</label>
+                    <select class="form-select" aria-label="Default select example" name="category">
+                        <option value="M">Mobile</option>
+                        <option value="L">Laptop</option>
+                        <option value="TW">Top Wear</option>
+                        <option value="BW">Bottom wear</option>
+                    </select>
+                </div>
+
+                <div class="mb-3 m-1">
+                    <label for="formFile" class="form-label">Choose Product Image</label>
+                    <input class="form-control" type="file" id="formFile" name="product_image">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Discription</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                        name="description"></textarea>
+                </div>
+
+                <div class="d-grid gap-2 col-6 mx-auto m-2">
+                    <button class="btn btn-primary" type="submit">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
